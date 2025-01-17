@@ -16,7 +16,6 @@ Bot.on('message', async message => {
             const en = await response.json()
             if(en.url.status){
                 const urlVideo = en.url.data[0].url
-                console.log(urlVideo)
                 const pathVideo = `api/${chatId}.mp4`
                 try {
                     await downloadFile(urlVideo, pathVideo)
